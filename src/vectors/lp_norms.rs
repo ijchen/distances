@@ -12,6 +12,9 @@ use super::utils::abs_diff_iter;
 /// root of the sum of the squares of the absolute differences between the
 /// corresponding elements of the two vectors.
 ///
+/// See the [`crate::vectors`] module documentation for information on this
+/// function's potentially unexpected behaviors
+///
 /// # Arguments
 ///
 /// * `x` - The first slice of `Number`s.
@@ -22,8 +25,8 @@ use super::utils::abs_diff_iter;
 /// ```
 /// use distances::vectors::euclidean;
 ///
-/// let x: Vec<f64> = vec![1., 2., 3.];
-/// let y: Vec<f64> = vec![4., 5., 6.];
+/// let x: Vec<f64> = vec![1.0, 2.0, 3.0];
+/// let y: Vec<f64> = vec![4.0, 5.0, 6.0];
 ///
 /// let distance: f64 = euclidean(&x, &y);
 ///
@@ -39,6 +42,9 @@ pub fn euclidean<T: Number, U: Float>(x: &[T], y: &[T]) -> U {
 /// as the sum of the squares of the absolute differences between the
 /// corresponding elements of the two vectors.
 ///
+/// See the [`crate::vectors`] module documentation for information on this
+/// function's potentially unexpected behaviors
+///
 /// # Arguments
 ///
 /// * `x` - The first slice of `Number`s.
@@ -49,8 +55,8 @@ pub fn euclidean<T: Number, U: Float>(x: &[T], y: &[T]) -> U {
 /// ```
 /// use distances::vectors::euclidean_sq;
 ///
-/// let x: Vec<f64> = vec![1., 2., 3.];
-/// let y: Vec<f64> = vec![4., 5., 6.];
+/// let x: Vec<f64> = vec![1.0, 2.0, 3.0];
+/// let y: Vec<f64> = vec![4.0, 5.0, 6.0];
 ///
 /// let distance: f64 = euclidean_sq(&x, &y);
 ///
@@ -66,6 +72,9 @@ pub fn euclidean_sq<T: Number, U: Number>(x: &[T], y: &[T]) -> U {
 /// defined as the sum of the absolute differences between the corresponding
 /// elements of the two vectors.
 ///
+/// See the [`crate::vectors`] module documentation for information on this
+/// function's potentially unexpected behaviors
+///
 /// # Arguments
 ///
 /// * `x` - The first slice of `Number`s.
@@ -76,8 +85,8 @@ pub fn euclidean_sq<T: Number, U: Number>(x: &[T], y: &[T]) -> U {
 /// ```
 /// use distances::vectors::manhattan;
 ///
-/// let x: Vec<f64> = vec![1., 2., 3.];
-/// let y: Vec<f64> = vec![4., 5., 6.];
+/// let x: Vec<f64> = vec![1.0, 2.0, 3.0];
+/// let y: Vec<f64> = vec![4.0, 5.0, 6.0];
 ///
 /// let distance: f64 = manhattan(&x, &y);
 ///
@@ -92,6 +101,9 @@ pub fn manhattan<T: Number>(x: &[T], y: &[T]) -> T {
 /// The L3-norm is defined as the cubic root of the sum of the cubes of the
 /// absolute differences between the corresponding elements of the two vectors.
 ///
+/// See the [`crate::vectors`] module documentation for information on this
+/// function's potentially unexpected behaviors
+///
 /// # Arguments
 ///
 /// * `x` - The first slice of `Number`s.
@@ -102,8 +114,8 @@ pub fn manhattan<T: Number>(x: &[T], y: &[T]) -> T {
 /// ```
 /// use distances::vectors::l3_norm;
 ///
-/// let x: Vec<f64> = vec![1., 2., 3.];
-/// let y: Vec<f64> = vec![4., 5., 6.];
+/// let x: Vec<f64> = vec![1.0, 2.0, 3.0];
+/// let y: Vec<f64> = vec![4.0, 5.0, 6.0];
 ///
 /// let distance: f64 = l3_norm(&x, &y);
 ///
@@ -122,6 +134,9 @@ pub fn l3_norm<T: Number, U: Float>(x: &[T], y: &[T]) -> U {
 /// The L4-norm is defined as the fourth root of the sum of the fourth powers of
 /// the absolute differences between the corresponding elements of the two
 ///
+/// See the [`crate::vectors`] module documentation for information on this
+/// function's potentially unexpected behaviors
+///
 /// # Arguments
 ///
 /// * `x` - The first slice of `Number`s.
@@ -132,8 +147,8 @@ pub fn l3_norm<T: Number, U: Float>(x: &[T], y: &[T]) -> U {
 /// ```
 /// use distances::vectors::l4_norm;
 ///
-/// let x: Vec<f64> = vec![1., 2., 3.];
-/// let y: Vec<f64> = vec![4., 5., 6.];
+/// let x: Vec<f64> = vec![1.0, 2.0, 3.0];
+/// let y: Vec<f64> = vec![4.0, 5.0, 6.0];
 ///
 /// let distance: f64 = l4_norm(&x, &y);
 ///
@@ -154,6 +169,9 @@ pub fn l4_norm<T: Number, U: Float>(x: &[T], y: &[T]) -> U {
 /// Also known as the L∞-norm, the Chebyshev distance is defined as the maximum
 /// absolute difference between the corresponding elements of the two vectors.
 ///
+/// See the [`crate::vectors`] module documentation for information on this
+/// function's potentially unexpected behaviors
+///
 /// # Arguments
 ///
 /// * `x` - The first slice of `Number`s.
@@ -164,8 +182,8 @@ pub fn l4_norm<T: Number, U: Float>(x: &[T], y: &[T]) -> U {
 /// ```
 /// use distances::vectors::chebyshev;
 ///
-/// let x: Vec<f64> = vec![1., 2., 3.];
-/// let y: Vec<f64> = vec![6., 5., 4.];
+/// let x: Vec<f64> = vec![1.0, 2.0, 3.0];
+/// let y: Vec<f64> = vec![6.0, 5.0, 4.0];
 ///
 /// let distance: f64 = chebyshev(&x, &y);
 ///
@@ -182,6 +200,9 @@ pub fn chebyshev<T: Number>(x: &[T], y: &[T]) -> T {
 /// This is defined as the sum of the pth powers of the absolute differences
 /// between the corresponding elements of the two slices.
 ///
+/// See the [`crate::vectors`] module documentation for information on this
+/// function's potentially unexpected behaviors
+///
 /// # Arguments
 ///
 /// * `x` - The first slice of `Number`s.
@@ -194,8 +215,8 @@ pub fn chebyshev<T: Number>(x: &[T], y: &[T]) -> T {
 ///
 /// let metric = minkowski_p(3);
 ///
-/// let x: Vec<f64> = vec![1., 2., 3.];
-/// let y: Vec<f64> = vec![4., 5., 6.];
+/// let x: Vec<f64> = vec![1.0, 2.0, 3.0];
+/// let y: Vec<f64> = vec![4.0, 5.0, 6.0];
 ///
 /// let distance: f64 = metric(&x, &y);
 /// assert!((distance - 81.0).abs() <= 1e-12);
@@ -209,6 +230,9 @@ pub fn minkowski_p<T: Number, U: Float>(p: i32) -> impl Fn(&[T], &[T]) -> U {
 /// The Lp-norm is defined as the pth root of the sum of the pth powers of
 /// the absolute differences between the corresponding elements of the two
 ///
+/// See the [`crate::vectors`] module documentation for information on this
+/// function's potentially unexpected behaviors
+///
 /// # Arguments
 ///
 /// * `x` - The first slice of `Number`s.
@@ -221,8 +245,8 @@ pub fn minkowski_p<T: Number, U: Float>(p: i32) -> impl Fn(&[T], &[T]) -> U {
 ///
 /// let metric = minkowski(3);
 ///
-/// let x: Vec<f64> = vec![1., 2., 3.];
-/// let y: Vec<f64> = vec![4., 5., 6.];
+/// let x: Vec<f64> = vec![1.0, 2.0, 3.0];
+/// let y: Vec<f64> = vec![4.0, 5.0, 6.0];
 ///
 /// let distance: f64 = metric(&x, &y);
 /// assert!((distance - (81.0_f64).cbrt()).abs() <= 1e-12);
